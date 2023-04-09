@@ -1,0 +1,14 @@
+overwrite: true
+schema: "http://127.0.0.1:8080/query"
+documents:
+  - "components/**/*.graphql"
+generates:
+  ./generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typed-document-node"
+    config:
+      avoidOptionals:
+        objet: true
+        field: true
